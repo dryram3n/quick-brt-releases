@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/dryram3n/quick-brt-releases/releases/latest"><img src="https://img.shields.io/badge/latest-v0.2.0-18a8bd?style=flat-square" alt="Latest release"></a>
+  <a href="https://github.com/dryram3n/quick-brt-releases/releases/latest"><img src="https://img.shields.io/badge/latest-v0.2.1-18a8bd?style=flat-square" alt="Latest release"></a>
   <img src="https://img.shields.io/badge/platform-Windows%2011-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows">
   <img src="https://img.shields.io/badge/built%20with-Python%20%2B%20PySide6-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python + PySide6">
 </p>
@@ -34,10 +34,19 @@ Windows, no installer, no account required.
 >
 > **Smart AI mode** (any-background removal: people, fur, complex scenes) ships inside the full build. If you delete the `smart_ai` folder to reclaim space, the app re-downloads it on demand the next time you enable Smart mode.
 
-Two assets are published with every release:
+Two downloadable bundles are published with every release:
 
 - **`QuickBRT-windows-latest.zip`** the full app, Smart AI included. This is the one you want.
 - **`QuickBRT-smart-windows-latest.zip`** the Smart AI only bundle, used by the in-app downloader if you remove and later re-enable Smart mode.
+
+The Smart AI bundle also includes a SHA-256 sidecar that the app verifies before installing executable code.
+
+### What changed in v0.2.1
+
+- Hardened Smart AI downloads with checksum verification, staged extraction, and archive safety checks.
+- Improved automatic background detection, EXIF orientation handling, and WebP size targeting.
+- Added collision-safe batch renaming, safer grid output naming, and oversized-image protection.
+- Prevented app shutdown while background workers are still active.
 
 ---
 
@@ -56,7 +65,7 @@ It removes only the edge-connected background, so same-color detail inside the s
 ## Highlights
 
 - **Edge-aware background removal** that clears only the edge-connected background and keeps same-color detail inside the subject, with tunable tolerance, feather, and edge cleanup.
-- **Auto detect plus color presets:** Auto samples the dominant border color (OpenCV kmeans) and works on any solid color. Black, Green, White, and Custom (color picker) are one click away.
+- **Auto detect plus color presets:** Auto finds the dominant border-color bucket and works on any solid color. Black, Green, White, and Custom (color picker) are one click away.
 - **Smart (AI) mode** uses a neural network (rembg) to remove any background: people, fur, complex scenes. Optional one-time download (~120 MB) that you can delete and re-fetch on demand.
 - **Discord-oriented size targets** with automatic quality reduction and an option to resize only when a file is actually over the limit. Transparent WebP by default, lossless PNG fallback.
 - **A full toolbox** beyond background removal: resizer, format converter, rotate/flip, adjustments, crop, watermark, EXIF, sprite grid, and batch rename.
