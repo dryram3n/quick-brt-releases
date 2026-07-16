@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/quickbrt-banner.png" alt="Quick BRT" width="100%">
+  <img src="assets/portal-cat-hero.png" alt="Quick BRT portal-cat workflow studio" width="100%">
 </p>
 
 <h1 align="center">Quick BRT</h1>
@@ -34,12 +34,7 @@ Windows, no installer, no account required.
 >
 > **Smart AI mode** (any-background removal: people, fur, complex scenes) ships inside the full build. If you delete the `smart_ai` folder to reclaim space, the app re-downloads it on demand the next time you enable Smart mode.
 
-Two downloadable bundles are published with every release:
-
-- **`QuickBRT-windows-latest.zip`** the full app, Smart AI included. This is the one you want.
-- **`QuickBRT-smart-windows-latest.zip`** the Smart AI only bundle, used by the in-app downloader if you remove and later re-enable Smart mode.
-
-The Smart AI bundle also includes a SHA-256 sidecar that the app verifies before installing executable code.
+The full download is the complete app including Smart AI. Your recipes live in your user config folder, so they survive an update.
 
 ### What changed in v0.2.1
 
@@ -52,12 +47,12 @@ The Smart AI bundle also includes a SHA-256 sidecar that the app verifies before
 
 ## What is Quick BRT?
 
-Quick BRT is a Windows desktop app by [ThrombloCreates](https://www.thromblocreates.com) for batch-removing image backgrounds and batch-processing images for Discord workflows. Drop in a folder, and it chews through every image in parallel: clears the background, hits a Discord size target, resizes, converts, watermarks, and more, all in an OLED true-black UI.
+Quick BRT is a Windows workflow studio by [ThrombloCreates](https://www.thromblocreates.com) for building reusable batch image recipes. Add a folder once, arrange background removal, crop, resize, adjustments, watermarking, and sprite creation into an ordered stack, preview the result, then process the entire batch without modifying the source files.
 
 It removes only the edge-connected background, so same-color detail inside the subject is preserved. For solid backgrounds it is instant and offline. For anything arbitrary, the optional Smart (AI) mode handles it.
 
 <p align="center">
-  <b>Auto + 4 color modes</b> &nbsp;·&nbsp; <b>Smart AI removal</b> &nbsp;·&nbsp; <b>10 tool tabs</b> &nbsp;·&nbsp; <b>Parallel batch engine</b> &nbsp;·&nbsp; <b>Transparent WebP</b>
+  <b>Ordered recipes</b> &nbsp;·&nbsp; <b>Interactive preview</b> &nbsp;·&nbsp; <b>Smart AI removal</b> &nbsp;·&nbsp; <b>Atomic batch engine</b> &nbsp;·&nbsp; <b>Portal-cat UI</b>
 </p>
 
 ---
@@ -68,13 +63,15 @@ It removes only the edge-connected background, so same-color detail inside the s
 - **Auto detect plus color presets:** Auto finds the dominant border-color bucket and works on any solid color. Black, Green, White, and Custom (color picker) are one click away.
 - **Smart (AI) mode** uses a neural network (rembg) to remove any background: people, fur, complex scenes. Optional one-time download (~120 MB) that you can delete and re-fetch on demand.
 - **Discord-oriented size targets** with automatic quality reduction and an option to resize only when a file is actually over the limit. Transparent WebP by default, lossless PNG fallback.
-- **A full toolbox** beyond background removal: resizer, format converter, rotate/flip, adjustments, crop, watermark, EXIF, sprite grid, and batch rename.
-- **Parallel, CPU-aware processing** with a rolling queue, so huge folders fly without choking the machine. Original filenames are retained.
-- **Polished to use:** a branded launch splash, a draggable help mascot, menu bar, status bar, drag-and-drop or paste on any tab, and a preset save/load system.
+- **Ordered recipe stacks** combine background removal, resize, crop, rotate, adjustments, watermarking, and sprite creation in one non-destructive batch.
+- **Interactive preview canvas** supports zoom, checkerboard transparency, before-and-after comparison, direct crop drawing, and per-image overrides.
+- **Safe exports** provide filename templates, metadata policy, format and quality controls, conflict preflight, atomic writes, cancellation, and structured results.
+- **Reusable recipe files** can be saved, shared, reopened, and optionally created from legacy one-tool presets.
+- **Portal-cat visual system** gives empty, working, success, and error states a consistent custom identity without covering the controls.
 
 ---
 
-## What is in the box
+## Workflow studio
 
 ### Background removal
 
@@ -85,25 +82,19 @@ It removes only the edge-connected background, so same-color detail inside the s
 - Transparent WebP output by default, PNG fallback for lossless.
 - Discord-oriented size targets with automatic quality reduction and optional resize only when needed.
 
-### The rest of the tabs
-
-- **Image Resizer:** scale presets (`x8`, `x4`, `x2`, `x1`, `/2`, `/4`, `/8`), custom dimensions, or aspect ratio plus long edge. Fit, fill/crop, and stretch behaviors.
-- **Format Converter:** PNG, JPEG, WebP, BMP, TIFF, GIF.
-- **Rotate / Flip:** 90/180/270 degree rotations plus horizontal/vertical flip.
-- **Adjustments:** brightness, contrast, saturation, sharpen, blur.
-- **Crop:** aspect-ratio presets or custom pixel coordinates with anchor positioning.
-- **Watermark:** text watermark with font size, opacity, 9 positions, and custom color.
-- **EXIF:** view and strip EXIF metadata.
-- **Grid / Sprite:** build sprite sheets from multiple images.
-- **Rename:** batch rename with patterns, prefixes, suffixes, find/replace, and sequence numbers.
+- **Sources:** add files or recursive folders once, inspect image and EXIF details, remove individual inputs, and preview any selected image.
+- **Recipe:** add, reorder, enable, duplicate, and configure processing steps. Background removal stays first and grid or sprite output stays last.
+- **Canvas:** compare before and after, inspect transparency, zoom, and draw per-image crop rectangles directly.
+- **Expanded tools:** padded and no-upscale resizing, free-angle rotation, exposure, gamma, temperature, tint, text or logo watermarks, transparent grids, trimming, and power-of-two sprite canvases.
+- **Export:** choose PNG, JPEG, WebP, BMP, TIFF, GIF, or source format, then control quality, metadata, naming tokens, and collision behavior.
+- **Results:** review every output and failure after a run while partial files remain hidden through atomic writes.
 
 ### UI and brand
 
-- Branded launch splash with the ThrombloCreates wordmark animation and a real-progress loading bar.
-- OLED true-black UI with brand cyan accents matching the ThrombloCreates website.
-- **Flop**, the floppy disc mascot: a draggable help assistant with context-aware tips per tab.
-- Menu bar and status bar, drag-and-drop images or folders, and Ctrl+V paste on any tab.
-- Preset save/load system for your favorite settings.
+- Original portal-cat application icon and semantic artwork for empty, drag, working, success, and error states.
+- OLED-black surfaces with cyan portal lighting, centralized design tokens, visible keyboard focus, and reduced-motion support.
+- A three-pane workspace that remains usable at 1024 x 700 and scales cleanly on high-DPI Windows displays.
+- Menu shortcuts for adding sources, opening and saving recipes, running the current recipe, and viewing the workflow guide.
 
 ---
 
@@ -114,6 +105,10 @@ For background removal: `Auto detect` color, `WebP transparent` format, `8 MB Di
 If too much of the subject is removed, lower `Tolerance` and `Edge cleanup`. If a colored outline remains, raise them slightly. For tricky backgrounds, switch to the specific color or use `Custom`. For arbitrary backgrounds (people, fur, scenes), turn on `Smart (AI) mode`.
 
 ---
+
+<p align="center">
+  <img src="assets/quickbrt-icon.svg" alt="Quick BRT portal-cat icon" width="72">
+</p>
 
 <p align="center">
   <sub>A <a href="https://www.thromblocreates.com/quickbrt/">Thromblo Creates</a> tool &nbsp;·&nbsp; Windows builds are unsigned &nbsp;·&nbsp; This repository hosts the downloadable releases. See <a href="https://github.com/dryram3n/quick-brt-releases/releases">Releases</a> for version history and patch notes.</sub>
