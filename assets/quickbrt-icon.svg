@@ -1,14 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <defs>
-    <linearGradient id="portal" x1="12" y1="8" x2="52" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#A8F4FF"/><stop offset=".52" stop-color="#38E0D6"/><stop offset="1" stop-color="#176D70"/>
-    </linearGradient>
-    <radialGradient id="glow"><stop stop-color="#38E0D6" stop-opacity=".42"/><stop offset="1" stop-color="#38E0D6" stop-opacity="0"/></radialGradient>
-  </defs>
-  <rect width="64" height="64" rx="14" fill="#050709"/>
-  <circle cx="32" cy="34" r="27" fill="url(#glow)"/>
-  <ellipse cx="32" cy="37" rx="23" ry="19" stroke="url(#portal)" stroke-width="4"/>
-  <path d="M21 24 24 14l8 7 8-7 3 10c4 4 6 9 5 14-1 9-8 14-16 14S17 47 16 38c-1-5 1-10 5-14Z" fill="#101A22" stroke="#A8F4FF" stroke-width="2" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Quick BRT portal cat">
+  <rect width="64" height="64" rx="14" fill="#071015"/>
+  <ellipse cx="32" cy="35" rx="24" ry="21" fill="#101A22" stroke="#38E0D6" stroke-width="4"/>
+  <path d="M21 25 24 14l8 7 8-7 3 11c4 4 6 9 5 14-1 8-8 13-16 13S17 47 16 39c-1-5 1-10 5-14Z" fill="#151B24" stroke="#EDF8FA" stroke-width="2" stroke-linejoin="round"/>
   <path d="M24 34h5M35 34h5" stroke="#38E0D6" stroke-width="3" stroke-linecap="round"/>
   <path d="m29 41 3 2 3-2M32 43v3" stroke="#EDF8FA" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
