@@ -4,7 +4,7 @@
 
 <h1 align="center">Quick BRT</h1>
 
-<p align="center"><b>Remove backgrounds and resize images in batches. Instantly.</b></p>
+<p align="center"><b>Build reusable batch image recipes through one non-destructive studio.</b></p>
 
 <p align="center">
   <a href="https://github.com/dryram3n/quick-brt-releases/releases/latest/download/QuickBRT-windows-latest.zip"><img src="https://img.shields.io/badge/Download%20for%20Windows-18a8bd?style=for-the-badge&logo=windows&logoColor=white" alt="Download for Windows"></a>
@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/dryram3n/quick-brt-releases/releases/latest"><img src="https://img.shields.io/badge/latest-v0.2.1-18a8bd?style=flat-square" alt="Latest release"></a>
+  <a href="https://github.com/dryram3n/quick-brt-releases/releases/latest"><img src="https://img.shields.io/badge/latest-v0.3.0-18a8bd?style=flat-square" alt="Latest release"></a>
   <img src="https://img.shields.io/badge/platform-Windows%2011-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows">
   <img src="https://img.shields.io/badge/built%20with-Python%20%2B%20PySide6-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python + PySide6">
 </p>
@@ -36,12 +36,12 @@ Windows, no installer, no account required.
 
 The full download is the complete app including Smart AI. Your recipes live in your user config folder, so they survive an update.
 
-### What changed in v0.2.1
+### What changed in v0.3.0
 
-- Hardened Smart AI downloads with checksum verification, staged extraction, and archive safety checks.
-- Improved automatic background detection, EXIF orientation handling, and WebP size targeting.
-- Added collision-safe batch renaming, safer grid output naming, and oversized-image protection.
-- Prevented app shutdown while background workers are still active.
+- Rebuilt the app around one source tray, live preview canvas, ordered recipe stack, and safe export flow.
+- Added reusable recipe files, direct crop drawing, paint-to-remove mask refinement, and per-image overrides.
+- Expanded resizing, rotation, color, watermark, grid, sprite, metadata, naming, and collision controls.
+- Introduced the complete portal-cat visual system with high-DPI artwork and reduced-motion support.
 
 ---
 
